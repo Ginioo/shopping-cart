@@ -66,11 +66,11 @@ class ShoppingCart
 
     /**
      * @param Product $product
-     * @return array
+     * @return ShoppingCart
      */
-    public function remove(Product $product): array
+    public function remove(Product $product): self
     {
-        $originalItems = $this->items;
+        $oldCart = clone $this;
 
         $key = $this->itemIdx[$product->id];
         if ($key >= 0) {
@@ -83,7 +83,7 @@ class ShoppingCart
             $this->itemIdx = array_values($this->itemIdx);
         }
 
-        return $originalItems;
+        return $oldCart;
     }
 
     /**
@@ -92,5 +92,13 @@ class ShoppingCart
     public function getPrice(): int
     {
         return ceil($this->price);
+    }
+
+    /**
+     * @return int
+     */
+    public function getCount(): int
+    {
+        return count($this->items);
     }
 }
