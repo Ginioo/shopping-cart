@@ -1,4 +1,4 @@
-# ginioo/shopping-cart
+# ginioo/shopping-cart [![Build Status](https://travis-ci.org/Ginioo/shopping-cart.svg?branch=master)](https://travis-ci.org/Ginioo/shopping-cart)
 a simple php shopping cart package
 
 ### Project setup

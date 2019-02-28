@@ -16,7 +16,7 @@
     }
   ],
   "scripts": {
-    "test": "phpunit --color=always --bootstrap vendor/autoload.php tests/ --coverage-html=coverage.html",
+    "test": "phpunit --color=always --bootstrap vendor/autoload.php tests/",
     "list-tests": "phpunit --list-tests tests/"
   },
   "autoload": {
