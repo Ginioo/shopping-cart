@@ -1,0 +1,33 @@
+{
+  "name": "ginioo/shopping-cart",
+  "description": "a simple shopping cart package",
+  "type": "library",
+  "version": "1.0.0",
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "authors": [
+    {
+      "name": "Gino",
+      "email": "nikeorz@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit --color=always --bootstrap vendor/autoload.php tests/ --coverage-html=coverage.html",
+    "list-tests": "phpunit --list-tests tests/"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ginioo\\Shop\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ginioo\\Shop\\": "src/",
+      "Ginioo\\ShopTests\\": "tests/"
+    }
+  }
+}
